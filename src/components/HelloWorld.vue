@@ -50,7 +50,11 @@ export default {
                     header: '생성일',
                     filter: {
                         type: 'date',
-                        operator: 'AND'
+                        operator: 'AND',
+                        format: 'yyyy.MM.dd'
+                    },
+                    formatter ({ value }) {
+                        return moment(value).format('YYYY.MM.DD')
                     }
                 },
                 {
